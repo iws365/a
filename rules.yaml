@@ -104,6 +104,9 @@ proxy-groups:
       - ♻️ 自动选择
 rules:
  - DOMAIN-SUFFIX,openai.com,🤖 Chatgpt
+ - DOMAIN-SUFFIX,taobao.com,🛑 全球拦截
+ - DOMAIN-SUFFIX,tmall.com,🛑 全球拦截
+ - DOMAIN-SUFFIX,alipay.com,🛑 全球拦截
  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-loopback,🎯 全球直连
