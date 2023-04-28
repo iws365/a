@@ -5,13 +5,10 @@ mode: Rule
 log-level: silent
 external-controller: 127.0.0.1:60000
 
-# 节点配置文件统一存放在 ./profiles/proxies/ 目录中
-
 proxy-providers:
- # 从本地导入的 clash 配置文件
-
  ABC:
    type: http
+   # 节点配置文件统一存放在 ./profiles/proxies/ 目录中
    path: ./profiles/proxies/abc.yaml
    url:  https://raw.githubusercontent.com/iws365/a/main/abc.yaml
    interval: 3600 
