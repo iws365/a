@@ -15,7 +15,7 @@ proxy-providers:
    health-check:
      enable: true
      url: http://www.gstatic.com/generate_204
-     interval: 60
+     interval: 300
  Chatgpt:
    type: http
    path: ./profiles/proxies/Chatgpt.yaml
@@ -25,7 +25,7 @@ proxy-providers:
    health-check:
      enable: true
      url: http://www.gstatic.com/generate_204
-     interval: 60
+     interval: 300
      
 proxy-groups:
   - name: 🚀 节点选择
@@ -39,7 +39,7 @@ proxy-groups:
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
-    interval: 60
+    interval: 300
     tolerance: 50
     use: # 引入proxy-provider 使用 use 关键字
       - ABC   
@@ -47,7 +47,7 @@ proxy-groups:
   - name: Chatgpt
     type: url-test
     url: http://www.gstatic.com/generate_204
-    interval: 60
+    interval: 300
     tolerance: 50
     use: # 引入proxy-provider 使用 use 关键字
       - Chatgpt
