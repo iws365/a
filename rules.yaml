@@ -16,6 +16,36 @@ proxy-providers:
      enable: true
      url: http://www.gstatic.com/generate_204
      interval: 60
+ 🇭🇰 HK:
+   type: http
+   path: ./profiles/proxies/NL.yaml
+   url: https://raw.githubusercontent.com/iws365/a/main/abc.yaml
+   interval: 3600 
+   filter: '🇭🇰' # 删选出含有该关键词的节点
+   health-check:
+     enable: true
+     url: http://www.gstatic.com/generate_204
+     interval: 300
+ 🇫🇷 FR:
+   type: http
+   path: ./profiles/proxies/NL.yaml
+   url: https://raw.githubusercontent.com/iws365/a/main/abc.yaml
+   interval: 3600 
+   filter: '🇫🇷' # 删选出含有该关键词的节点
+   health-check:
+     enable: true
+     url: http://www.gstatic.com/generate_204
+     interval: 300 
+ 🇳🇱 NL:
+   type: http
+   path: ./profiles/proxies/NL.yaml
+   url: https://raw.githubusercontent.com/iws365/a/main/abc.yaml
+   interval: 3600 
+   filter: '🇳🇱' # 删选出含有该关键词的节点
+   health-check:
+     enable: true
+     url: http://www.gstatic.com/generate_204
+     interval: 300
      
 proxy-groups:
   - name: 🚀 节点选择
@@ -82,6 +112,9 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
 rules:
+ - DOMAIN-SUFFIX,openai.com,🇭🇰 HK
+ - DOMAIN-SUFFIX,openai.com,🇫🇷 FR
+ - DOMAIN-SUFFIX,openai.com,🇳🇱 NL
  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-loopback,🎯 全球直连
