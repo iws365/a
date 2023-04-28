@@ -18,7 +18,7 @@ proxy-providers:
      interval: 60
  Chatgpt:
    type: http
-   path: ./profiles/proxies/NL.yaml
+   path: ./profiles/proxies/Chatgpt.yaml
    url: https://raw.githubusercontent.com/iws365/a/main/abc.yaml
    interval: 3600 
    filter: '🇭🇰|🇫🇷|🇳🇱' # 删选出含有该关键词的节点
