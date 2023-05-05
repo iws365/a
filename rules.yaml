@@ -34,8 +34,8 @@ proxy-groups:
       - ♻️ 自动选择
       - 🤖 Chatgpt
       - DIRECT
-    use: # 引入proxy-provider 使用 use 关键字
-      - ABC
+    #use: # 引入proxy-provider 使用 use 关键字
+    #  - ABC
       
   - name: ♻️ 自动选择
     type: url-test
