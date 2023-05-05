@@ -32,8 +32,8 @@ proxy-groups:
     type: select
     proxies:
       - ♻️ 自动选择
-      - 🤖 Chatgpt
-      - DIRECT
+    #  - 🤖 Chatgpt
+    #  - DIRECT
     #use: # 引入proxy-provider 使用 use 关键字
     #  - ABC
       
