@@ -26,13 +26,24 @@ proxy-providers:
      enable: true
      url: http://www.gstatic.com/generate_204
      interval: 60
+ USA:
+   type: http
+   path: ./profiles/proxies/Chatgpt.yaml
+   url: https://raw.githubusercontent.com/iws365/a/main/abc.yaml
+   interval: 900
+   filter: '🇺🇸' # 删选出含有该关键词的节点
+   health-check:
+     enable: true
+     url: http://www.gstatic.com/generate_204
+     interval: 60
      
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
-    #  - 🤖 Chatgpt
+      - 🤖 Chatgpt
+      - 🤖 Chatgpt
     #  - DIRECT
     #use: # 引入proxy-provider 使用 use 关键字
     #  - ABC
@@ -52,6 +63,14 @@ proxy-groups:
     tolerance: 50
     use: # 引入proxy-provider 使用 use 关键字
       - Chatgpt
+      
+  - name: 🇺🇸 USA
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    use: # 引入proxy-provider 使用 use 关键字
+      - USA
       
   - name: 🌍 国外媒体
     type: select
