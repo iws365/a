@@ -12,8 +12,7 @@ proxy-providers:
    path: ./profiles/proxies/abc.yaml
    url:  https://raw.githubusercontent.com/iws365/a/main/abc.yaml
    interval: 1000
-   filter-reverse:
-     country: 'CN|cn|中国'
+   filter-reverse: 'CN|cn|中国'
    health-check:
      enable: true
      url: http://www.gstatic.com/generate_204
@@ -24,8 +23,7 @@ proxy-providers:
    url: https://raw.githubusercontent.com/iws365/a/main/abc.yaml
    interval: 900
    filter: '🇭🇰|🇫🇷|🇳🇱|HK|FR|NL|KR|SG|伊朗|日本|' # 删选出含有该关键词的节点
-   filter-reverse:
-     country: 'CN|US|cn|us|中国|美国'
+   filter-reverse: 'CN|US|cn|us|中国|美国'
    health-check:
      enable: true
      url: http://www.gstatic.com/generate_204
