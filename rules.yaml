@@ -6,18 +6,6 @@ log-level: silent
 external-controller: 127.0.0.1:60000
 
 proxy-providers:
- test:
-   type: http
-   # 节点配置文件统一存放在 ./profiles/proxies/ 目录中
-   path: ./profiles/proxies/abc.yaml
-   url:  https://raw.githubusercontent.com/iws365/a/main/abc.yaml
-   interval: 1000
-   filter: cn|CN|中国|🇭🇰|HK
-   #filter-reverse: CN,cn,中国
-   health-check:
-     enable: true
-     url: http://www.gstatic.com/generate_204
-     interval: 300
  ABC:
    type: http
    # 节点配置文件统一存放在 ./profiles/proxies/ 目录中
@@ -34,18 +22,7 @@ proxy-providers:
    path: ./profiles/proxies/Chatgpt.yaml
    url: https://raw.githubusercontent.com/iws365/a/main/abc.yaml
    interval: 900
-   filter: '🇭🇰|🇫🇷|🇳🇱|HK|FR|NL|KR|SG|' # 删选出含有该关键词的节点
-   filter-reverse: CN,cn,中国
-   health-check:
-     enable: true
-     url: http://www.gstatic.com/generate_204
-     interval: 60
- USA:
-   type: http
-   path: ./profiles/proxies/Chatgpt.yaml
-   url: https://raw.githubusercontent.com/iws365/a/main/abc.yaml
-   interval: 900
-   filter: '🇺🇸|US|美国' # 删选出含有该关键词的节点
+   filter-reverse: CN,cn,🇨🇳,中国,us,US,🇺🇸,美国
    health-check:
      enable: true
      url: http://www.gstatic.com/generate_204
