@@ -13,7 +13,7 @@ proxy-providers:
    url:  https://raw.githubusercontent.com/iws365/a/main/abc.yaml
    interval: 1000
    filter: 'cn|CN|中国|🇭🇰|HK|'
-   filter-reverse: CN,cn,中国
+   #filter-reverse: CN,cn,中国
    health-check:
      enable: true
      url: http://www.gstatic.com/generate_204
