@@ -43,8 +43,6 @@ proxy-groups:
     type: select
     proxies:
       - ♻️ 自动选择
-      - 🤖 Chatgpt
-      - 🇺🇸 USA
     #  - DIRECT
     use: # 引入proxy-provider 使用 use 关键字
       - ABC
@@ -58,7 +56,9 @@ proxy-groups:
       - ABC   
       
   - name: 🤖 Chatgpt
-    type: url-test
+    type: select
+    proxies:
+      - ♻️ 自动选择
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
