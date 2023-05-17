@@ -64,6 +64,7 @@ proxy-groups:
     tolerance: 50
     use: # 引入proxy-provider 使用 use 关键字
       - Chatgpt
+      - 🚀 节点选择
       
   - name: 🇺🇸 USA
     type: url-test
