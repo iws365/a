@@ -59,7 +59,6 @@ proxy-groups:
       
   - name: 🤖 Chatgpt
     type: url-test
-    proxies:
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
