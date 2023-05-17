@@ -12,7 +12,7 @@ proxy-providers:
    path: ./profiles/proxies/abc.yaml
    url:  https://raw.githubusercontent.com/iws365/a/main/abc.yaml
    interval: 1000
-   filter-reverse: CN,cn,中国
+   filter: us|US|🇺🇸|美国|🇭🇰|🇳🇱|🇫🇷
    health-check:
      enable: true
      url: http://www.gstatic.com/generate_204
@@ -22,7 +22,7 @@ proxy-providers:
    path: ./profiles/proxies/Chatgpt.yaml
    url: https://raw.githubusercontent.com/iws365/a/main/abc.yaml
    interval: 900
-   filter-reverse: CN,cn,🇨🇳,中国,us,US,🇺🇸,美国
+   filter: 🇭🇰|🇳🇱|🇫🇷
    health-check:
      enable: true
      url: http://www.gstatic.com/generate_204
