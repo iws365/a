@@ -28,21 +28,12 @@ proxy-providers:
      url: http://www.gstatic.com/generate_204
      interval: 60
      
-proxy-groups:
-  - name: 测试
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    use: # 引入proxy-provider 使用 use 关键字
-      - test   
-      
+proxy-groups:      
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🤖 Chatgpt
-      - 🇺🇸 USA
     #  - DIRECT
     use: # 引入proxy-provider 使用 use 关键字
       - ABC
@@ -61,15 +52,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     use: # 引入proxy-provider 使用 use 关键字
-      - Chatgpt
-      
-  - name: 🇺🇸 USA
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    use: # 引入proxy-provider 使用 use 关键字
-      - USA
+      - Chatgpt      
       
   - name: 🌍 国外媒体
     type: select
