@@ -12,7 +12,7 @@ proxy-providers:
    path: ./profiles/proxies/abc.yaml
    url:  https://raw.githubusercontent.com/iws365/a/main/abc.yaml
    interval: 1000
-   filter: 'cn|CN|中国|🇭🇰|HK|'
+   filter: cn|CN|中国|🇭🇰|HK
    #filter-reverse: CN,cn,中国
    health-check:
      enable: true
