@@ -12,7 +12,7 @@ proxy-providers:
    path: ./profiles/proxies/abc.yaml
    url:  https://raw.githubusercontent.com/iws365/a/main/abc.yaml
    interval: 1000
-   filter: us|US|🇺🇸|美国|🇭🇰|🇳🇱|🇫🇷|HK|NL|FR|fr|nl|hk
+   filter: us|US|🇺🇸|美国|🇭🇰|🇳🇱|🇫🇷|HK|NL|FR|fr|nl|hk|🇦🇺|AU|澳大利亚|IN|印度|🇹🇼|TW|台湾|SG|新加坡|CA|加拿大|日本|JP|俄罗斯|🇦🇷|AR|阿根廷
    health-check:
      enable: true
      url: http://www.gstatic.com/generate_204
@@ -22,7 +22,7 @@ proxy-providers:
    path: ./profiles/proxies/Chatgpt.yaml
    url: https://raw.githubusercontent.com/iws365/a/main/abc.yaml
    interval: 900
-   filter: 🇭🇰|🇳🇱|🇫🇷|HK|NL|FR|fr|nl|hk
+   filter: 🇭🇰|🇳🇱|🇫🇷|HK|NL|FR|fr|nl|hk|🇦🇺|AU|澳大利亚|IN|印度|🇹🇼|TW|台湾|SG|新加坡|CA|加拿大|日本|JP|俄罗斯|🇦🇷|AR|阿根廷
    health-check:
      enable: true
      url: http://www.gstatic.com/generate_204
