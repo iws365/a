@@ -10,7 +10,18 @@ proxy-providers:
    type: http
    # 节点配置文件统一存放在 ./profiles/proxies/ 目录中
    path: ./profiles/proxies/abc.yaml
-   url:  https://raw.githubusercontent.com/iws365/a/main/abc.yaml
+   url: https://raw.githubusercontent.com/iws365/a/main/abc.yaml
+   interval: 1000
+   filter: 美国|US|🇺🇸|印度|IN|🇮🇳|巴基斯坦|PK|🇵🇰|意大利|IT|🇮🇹|日本|JP|🇯🇵|印度尼西亚|ID|🇮🇩|越南|VN|🇻🇳|南非|ZA|🇿🇦|乌克兰|UA|🇺🇦|德国|DE|🇩🇪|小玉麦国|MD|🇲🇩|泰国|TH|🇹🇭|土耳其|TR|🇹🇷|斯里兰卡|LK|🇱🇰|菲律宾|PH|🇵🇭|尼泊尔|NP|🇳🇵|马来西亚|MY|🇲🇾|澳大利亚|AU|🇦🇺|新西兰|NZ|🇳🇿|加拿大|CA|🇨🇦|埃及|EG|🇪🇬|阿根廷|AR|🇦🇷|墨西哥|MX|🇲🇽|巴西|BR|🇧🇷|俄罗斯|RU|🇷🇺|西班牙|ES|🇪🇸|法国|FR|🇫🇷|哈萨克斯坦|KZ|🇰🇿|英国|GB|🇬🇧|泰国|TH|🇹🇭|韩国|KR|🇰🇷|伊朗|IR|🇮🇷|波兰|PL|🇵🇱|以色列|IL|🇮🇱|荷兰|NL|🇳🇱|比利时|BE|🇧🇪|葡萄牙|PT|🇵🇹|希腊|GR|🇬🇷|匈牙利|HU|🇭🇺|捷克共和国|CZ|🇨🇿|罗马尼亚|RO|🇷🇴|白俄罗斯|BY|🇧🇾|保加利亚|BG|🇧🇬|立陶宛|LT|🇱🇹|拉脱维亚|LV|🇱🇻|爱沙尼亚|EE|🇪🇪|班加西|BN|🇧🇳|马耳他|MT|🇲🇹|塞内加尔|SN|🇸🇳
+   health-check:
+     enable: true
+     url: http://www.gstatic.com/generate_204
+     interval: 300
+ B:
+   type: http
+   # 节点配置文件统一存放在 ./profiles/proxies/ 目录中
+   path: ./profiles/proxies/abc.yaml
+   url: https://raw.githubusercontent.com/iws365/a/main/b.yaml
    interval: 1000
    filter: 美国|US|🇺🇸|印度|IN|🇮🇳|巴基斯坦|PK|🇵🇰|意大利|IT|🇮🇹|日本|JP|🇯🇵|印度尼西亚|ID|🇮🇩|越南|VN|🇻🇳|南非|ZA|🇿🇦|乌克兰|UA|🇺🇦|德国|DE|🇩🇪|小玉麦国|MD|🇲🇩|泰国|TH|🇹🇭|土耳其|TR|🇹🇷|斯里兰卡|LK|🇱🇰|菲律宾|PH|🇵🇭|尼泊尔|NP|🇳🇵|马来西亚|MY|🇲🇾|澳大利亚|AU|🇦🇺|新西兰|NZ|🇳🇿|加拿大|CA|🇨🇦|埃及|EG|🇪🇬|阿根廷|AR|🇦🇷|墨西哥|MX|🇲🇽|巴西|BR|🇧🇷|俄罗斯|RU|🇷🇺|西班牙|ES|🇪🇸|法国|FR|🇫🇷|哈萨克斯坦|KZ|🇰🇿|英国|GB|🇬🇧|泰国|TH|🇹🇭|韩国|KR|🇰🇷|伊朗|IR|🇮🇷|波兰|PL|🇵🇱|以色列|IL|🇮🇱|荷兰|NL|🇳🇱|比利时|BE|🇧🇪|葡萄牙|PT|🇵🇹|希腊|GR|🇬🇷|匈牙利|HU|🇭🇺|捷克共和国|CZ|🇨🇿|罗马尼亚|RO|🇷🇴|白俄罗斯|BY|🇧🇾|保加利亚|BG|🇧🇬|立陶宛|LT|🇱🇹|拉脱维亚|LV|🇱🇻|爱沙尼亚|EE|🇪🇪|班加西|BN|🇧🇳|马耳他|MT|🇲🇹|塞内加尔|SN|🇸🇳
    health-check:
@@ -44,7 +55,8 @@ proxy-groups:
     interval: 300
     tolerance: 50
     use: # 引入proxy-provider 使用 use 关键字
-      - ABC   
+      - ABC
+      - B
  
   - name: 🤖 Chatgpt
     type: url-test
