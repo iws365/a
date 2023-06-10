@@ -118,6 +118,7 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
 rules:
+ - DOMAIN-SUFFIX,googleadservices.com,🚀 节点选择
  - DOMAIN-SUFFIX,openai.com,🤖 Chatgpt
  - DOMAIN-SUFFIX,taobao.com,🛑 全球拦截
  - DOMAIN-SUFFIX,tmall.com,🛑 全球拦截
@@ -1176,7 +1177,6 @@ rules:
  - DOMAIN-SUFFIX,doubleclick.com,🍃 应用净化
  - DOMAIN-SUFFIX,doubleclick.net,🍃 应用净化
  - DOMAIN-SUFFIX,google-analytics.com,🍃 应用净化
- - DOMAIN-SUFFIX,googleadservices.com,🍃 应用净化
  - DOMAIN-SUFFIX,googleadsserving.cn,🍃 应用净化
  - DOMAIN-SUFFIX,googlecommerce.com,🍃 应用净化
  - DOMAIN-SUFFIX,googlesyndication.com,🍃 应用净化
