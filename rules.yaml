@@ -42,6 +42,9 @@ proxy-providers:
 proxy-groups:      
   - name: 🚀 节点选择
     type: select
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
     proxies:
       - ♻️ 自动选择
       - 🤖 Chatgpt
