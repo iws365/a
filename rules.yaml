@@ -61,17 +61,17 @@ proxy-groups:
     use: # 引入proxy-provider 使用 use 关键字
       - ABC
       - B
-  - name: 🤖 gpt
-    type: url-test
+  - name: 🤖 Chatgpt
+    type: select
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🤖 gpt
+      - 🤖 gptauto
     use: # 引入proxy-provider 使用 use 关键字
       - Chatgpt
       - B
-  - name: 🤖 Chatgpt
+  - name: 🤖 gptauto
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
